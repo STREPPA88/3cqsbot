@@ -8,4 +8,4 @@ RUN chmod +x /App/3cqsbot.py
 
 WORKDIR /App
 
-ENTRYPOINT ["python3", "importconfig.py"]
+ENTRYPOINT ["./start.sh", ""]

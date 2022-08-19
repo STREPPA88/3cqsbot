@@ -1,3 +1,5 @@
+#! usr/bin/env
+
 import argparse
 import re
 import logging

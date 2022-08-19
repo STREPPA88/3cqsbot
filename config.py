@@ -5,7 +5,7 @@ import sys
 class Config:
     def __init__(self):
         self.config = configparser.ConfigParser()
-        self.dataset = self.config.read("config.ini")
+        self.dataset = self.config.read("config.cfg")
         self.fixstrings = ["account_name", "prefix", "subprefix", "suffix"]
 
     def get(self, attribute, defaultvalue=""):

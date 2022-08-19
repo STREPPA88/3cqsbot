@@ -71,12 +71,12 @@ else:
 # Thanks to @M1cha3l for improving logging output
 handler = logging.StreamHandler()
 
-if attributes.get("log_to_file", False):
-    handler = logging.handlers.RotatingFileHandler(
-        attributes.get("log_file_path", "3cqsbot.log"),
-        maxBytes=attributes.get("log_file_size", 200000),
-        backupCount=attributes.get("log_file_count", 5),
-    )
+#if attributes.get("log_to_file", False):
+#    handler = logging.handlers.RotatingFileHandler(
+#        attributes.get("log_file_path", "3cqsbot.log"),
+#        maxBytes=attributes.get("log_file_size", 200000),
+#        backupCount=attributes.get("log_file_count", 5),
+#    )
 
 logging.basicConfig(
     format="%(asctime)s %(levelname)-8s %(message)s",

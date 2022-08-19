@@ -43,8 +43,8 @@ args = parser.parse_args()
 
 # Initialize 3Commas API client
 p3cw = Py3CW(
-    key=attributes.get("key"),
-    secret=attributes.get("secret"),
+    key=os.getenv("API_KEY"),
+    secret=os.getenv("API_SECRET"),
     request_options={
         "request_timeout": attributes.get("timeout", 3),
         "nr_of_retries": attributes.get("retries", 5),
@@ -54,9 +54,9 @@ p3cw = Py3CW(
 
 # Initialize Telegram API client
 client = TelegramClient(
-    attributes.get("sessionfile", "tgsesssion"),
-    attributes.get("api_id"),
-    attributes.get("api_hash"),
+    os.getenv("TG_SESSIONFILE"),
+    os.getenv("TG_ID"),
+    os.getenv("TG_HASH"),
 )
 
 # Set logging facility

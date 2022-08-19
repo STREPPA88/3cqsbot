@@ -1,3 +1,5 @@
+argparse
+configparser
 telethon
 py3cw
 pycoingecko

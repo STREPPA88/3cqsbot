@@ -23,7 +23,7 @@ from config import Config
 #                       Config                       #
 ######################################################
 
-port = os.getenv('PORT', default=80000)
+port = os.getenv('PORT', default=5000)
 attributes = Config()
 
 parser = argparse.ArgumentParser(

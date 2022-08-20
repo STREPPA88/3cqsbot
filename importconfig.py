@@ -85,4 +85,5 @@ with open('config.cfg', 'w') as configfile:
     config.write(configfile)
 
 port = os.getenv('PORT', default=5000)
-subprocess.run("./3cqsbot.py", shell=True, host='0.0.0.0', port=port)
+importconfig.run(host='0.0.0.0', port=port)
+#subprocess.run("./3cqsbot.py", shell=True, host='0.0.0.0', port=port)

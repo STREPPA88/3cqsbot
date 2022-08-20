@@ -23,15 +23,13 @@ from config import Config
 #                       Config                       #
 ######################################################
 
-port = os.getenv('PORT', default=5000)
-print(port)
 attributes = Config()
 
 parser = argparse.ArgumentParser(
     description="3CQSBot bringing 3CQS signals to 3Commas."
 )
-parser.add_argument("--host", default="0.0.0.0", type=str)
-parser.add_argument("--port", default=port, type=int)
+#parser.add_argument("--host", default="0.0.0.0", type=str)
+#parser.add_argument("--port", default=port, type=int)
 parser.add_argument(
     "-l",
     "--loglevel",

@@ -24,6 +24,7 @@ from config import Config
 ######################################################
 
 port = os.getenv('PORT', default=5000)
+print(port)
 attributes = Config()
 
 parser = argparse.ArgumentParser(

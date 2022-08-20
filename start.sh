@@ -1,6 +1,5 @@
 #!/bin/sh
 
-
 # General
 echo "[general]" > config.ini
 [ $DEBUG ] && echo "debug = $DEBUG" >> config.ini

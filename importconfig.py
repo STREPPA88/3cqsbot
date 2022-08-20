@@ -1,6 +1,27 @@
+import argparse
 import configparser
 import os
 import subprocess
+
+port = os.getenv('PORT', default=5000)
+print(port)
+
+parser = argparse.ArgumentParser(
+    description="3CQSBot bringing 3CQS signals to 3Commas."
+)
+parser.add_argument("--host", default="0.0.0.0", type=str)
+parser.add_argument("--port", default=port, type=int)
+parser.add_argument(
+    "-l",
+    "--loglevel",
+    metavar="loglevel",
+    type=str,
+    nargs="?",
+    default="info",
+    help="loglevel during runtime - use info, debug, warning, ...",
+)
+
+args = parser.parse_args()
 
 config = configparser.ConfigParser()
 

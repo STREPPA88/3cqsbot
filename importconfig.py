@@ -84,4 +84,5 @@ config['filter']['token_denylist'] =  str(os.getenv("FI_DENYLIST"))
 with open('config.cfg', 'w') as configfile:
     config.write(configfile)
 
-subprocess.run("./3cqsbot.py", shell=True)
+port = os.getenv('PORT', default=5000)
+subprocess.run("./3cqsbot.py", shell=True, host='0.0.0.0', port=port)

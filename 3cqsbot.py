@@ -10,6 +10,7 @@ import portalocker
 import math
 
 from telethon import TelegramClient, events
+from telethon.sessions import StringSession
 from py3cw.request import Py3CW
 from singlebot import SingleBot
 from multibot import MultiBot
@@ -56,10 +57,11 @@ p3cw = Py3CW(
 
 # Initialize Telegram API client
 client = TelegramClient(
-    os.getenv("TG_SESSIONFILE"),
+    StringSession(os.getenv("TG_SESSIONFILE")),
     os.getenv("TG_ID"),
     os.getenv("TG_HASH"),
 )
+string = StringSession.save(client.session)
 
 # Set logging facility
 if attributes.get("debug", False):

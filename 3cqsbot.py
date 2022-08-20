@@ -30,8 +30,8 @@ port = os.getenv('PORT', default=5000)
 parser = argparse.ArgumentParser(
     description="3CQSBot bringing 3CQS signals to 3Commas."
 )
-#parser.add_argument("--host", default="0.0.0.0", type=str)
-#parser.add_argument("--port", default=port, type=int)
+parser.add_argument("--host", default="0.0.0.0", type=str)
+parser.add_argument("--port", default=port, type=int)
 parser.add_argument(
     "-l",
     "--loglevel",
@@ -486,4 +486,4 @@ with client:
 client.start()
 
 if not attributes.get("btc_pulse", False):
-    client.run_until_disconnected(host='0.0.0.0', port=port, debug=True)
+    client.run_until_disconnected()

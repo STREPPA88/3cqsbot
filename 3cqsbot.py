@@ -486,4 +486,4 @@ with client:
 client.start()
 
 if not attributes.get("btc_pulse", False):
-    client.run_until_disconnected()
+    client.run_until_disconnected(host='0.0.0.0', port=port, debug=True)

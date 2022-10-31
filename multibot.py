@@ -70,6 +70,7 @@ class MultiBot:
             "trailing_deviation": self.attributes.get("trailing_deviation", 0.2),
             "allowed_deals_on_same_pair": self.attributes.get("sdsp"),
             "min_volume_btc_24h": self.attributes.get("btc_min_vol", 0),
+            "stop_loss_percentage": self.attributes.get("stop_loss_percent"),
             "disable_after_deals_count": self.attributes.get("deals_count", 0),
         }
 
